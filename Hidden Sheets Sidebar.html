@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+ <script>
+  function loadHiddenSheets(){
+    google.script.run.withSuccessHandler(function(arg){
+      let sheetSelect = document.getElementById('sheets');
+      console.log(arg);        
+      
+      let option = document .createElement('option');
+      option.value = '';
+      option.text = '-- Select Schedule --';
+      sheetSelect.appendChild(option);
+      
+      arg.forEach(function(item, index){
+        let option = document.createElement('option');
+        option.text = item[0];
+        //option.value = item[1];
+        sheetSelect.appendChild(option);
+      });
+    }).getHiddenSheetsList();
+  }
+</script>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <select id="sheets" ></select>
+    <script>loadHiddenSheets();</script>
+    <br/><br/>
+    <button id="submitButton" onclick="submit()">Show Hidden Schedule</button>
+    <button id="cancel" onclick="cancelButton()">Cancel</button>
+  <script>
+    function cancelButton(){
+      google.script.run.closeSidebar();
+    }
+    function submit(){
+      var sheet = document.getElementById('sheets').value;
+      console.log(sheet);
+      google.script.run.showHiddenSheet(sheet);
+    }
+  </script>
+  </body>
+</html>

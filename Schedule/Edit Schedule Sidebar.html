@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+.button {
+  border: 2px solid black;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 1px 1px;
+  cursor: pointer;
+  width: 150px;
+  color: black;
+}
+
+.buttonRO {
+background-color: #ff0000;
+}
+.buttonOpen {
+background-color: #ffe599;
+}
+.buttonMid {
+background-color: #e6b8af;
+}
+.buttonClose {
+background-color: #b4a7d6;
+}
+.buttonChange {
+background-color: #ffff00;
+}
+.buttonTraining {
+background-color: #00ff00;
+}
+.buttonInventory {
+background-color: #00ffff;
+}
+.buttonSpecial {
+background-color: #ff9900;
+}
+.buttonReset {
+background-color: #ffffff;
+}
+.buttonUnavail {
+background-color: #666666;
+}
+</style>
+  </head>
+  <body>
+    <button id="ro" onclick="roClicked()" class="button buttonRO" style="font-weight:bold;">Request Off</button>
+    &nbsp Red
+     <br/><br/>
+    <button id="open" onclick="openClicked()" class="button buttonOpen" style="font-weight:bold;">Open</button>
+    &nbsp Tan
+     <br/><br/>
+    <button id="mid" onclick="midClicked()" class="button buttonMid" style="font-weight:bold;">Mid</button>
+    &nbsp Pink
+     <br/><br/>
+    <button id="close" onclick="closeClicked()" class="button buttonClose" style="font-weight:bold;">Close</button>
+    &nbsp Purple
+    <br/><br/>
+    <button id="change" onclick="changeClicked()" class="button buttonChange" style="font-weight:bold;">Changes Made</button>
+    &nbsp Yellow
+     <br/><br/>
+    <button id="training" onclick="trainingClicked()" class="button buttonTraining" style="font-weight:bold;">Training</button>
+    &nbsp Green
+    <br/><br/>
+    <button id="inventory" onclick="inventoryClicked()" class="button buttonInventory" style="font-weight:bold;">Inventory</button>
+    &nbsp Cyan
+    <br/><br/>
+    <button id="special" onclick="specialClicked()" class="button buttonSpecial" style="font-weight:bold;">Special Shift</button>
+    &nbsp Orange
+    <br/><br/>
+    <button id="reset" onclick="resetClicked()" class="button buttonReset" style="font-weight:bold;">RESET</button>
+    &nbsp White
+    <br/><br/>
+    <button id="unavail" onclick="unavailClicked()" class="button buttonUnavail" style="font-weight:bold;">Unavailable</button>
+    &nbsp Grey
+    
+    <script>
+    function trainingClicked(){
+      google.script.run.shiftColor('training');
+    }
+    function roClicked(){
+      google.script.run.shiftColor('ro');
+    }
+    function inventoryClicked(){
+      google.script.run.shiftColor('inventory');
+    }
+    function specialClicked(){
+      google.script.run.shiftColor('special');
+    }
+    function openClicked(){
+      google.script.run.shiftColor('open');
+    }
+    function midClicked(){
+      google.script.run.shiftColor('mid');
+    }
+    function closeClicked(){
+      google.script.run.shiftColor('close');
+    }
+    function changeClicked(){
+      google.script.run.shiftColor('change');
+    }
+    function resetClicked(){
+      google.script.run.shiftColor('reset');
+    }
+    function unavailClicked(){
+      google.script.run.shiftColor('unavail');
+    }
+  </script>
+  
+  </body>
+</html>
+
+

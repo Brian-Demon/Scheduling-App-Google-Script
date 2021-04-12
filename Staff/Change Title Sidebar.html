@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+ <script>
+  function loadNames(){
+    google.script.run.withSuccessHandler(function(arg){
+      let nameSelect = document.getElementById('names');
+      console.log(arg);        
+      
+      let option = document .createElement('option');
+      option.value = '';
+      option.text = '-- Select Employee --';
+      nameSelect.appendChild(option);
+      
+      arg.forEach(function(item, index){
+        let option = document.createElement('option');
+        option.text = item[0];
+        //option.value = item[1];
+        nameSelect.appendChild(option);
+      });
+    }).getRosterList();
+     
+    
+  }
+</script>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <u><b>Titles:</b></u>
+    <br/>FO = Franchise Owner
+    <br/>GM = General Manager
+    <br/>AGM = Assistant General Manager
+    <br/>SL = Shift Lead
+    <br/>FOH = Front of House
+    <br/>BOH = Back of House
+    <br/><br/><br/>
+    <select id="names" ></select>
+    <script>loadNames();</script>
+    <br/><br/>
+    New Title:<br/>
+    <select id="title">
+    <option>FO</option>
+    <option>GM</option>
+    <option>AGM</option>
+    <option>SL</option>
+    <option>FOH</option>
+    <option>BOH</option>
+    </select>
+
+    <br/><br/><br/><br/>
+    <button id="submitButton" onclick="submit()">Submit</button>
+    <button id="viewCurrentStaffButton" onclick="staffButton()">View Current Staff</button>
+    <button id="cancel" onclick="cancelButton()">Cancel</button>
+    
+    <script> 
+    
+    function staffButton(){ google.script.run.viewCurrentStaff(); }
+    
+    function cancelButton(){ google.script.run.closeSidebar(); }
+    
+    function submit(){
+      let name = document.getElementById("names").value;
+      let title = document.getElementById("title").value;
+      
+      google.script.run.changeEmployeeTitle(name, title);
+    }
+  </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<script>
+  function loadDates(){
+    google.script.run.withSuccessHandler(function(arg){
+      let dateSelect = document.getElementById('dates');
+      console.log(arg);
+      
+      let option = document .createElement('option');
+      option.value = '0';
+      option.text = '-- Select Date --';
+      dateSelect.appendChild(option);
+      
+      arg.forEach(function(item, index){
+        let option = document.createElement('option');
+        option.text = item[0];
+        //option.value = item[1];
+        dateSelect.appendChild(option);
+      });
+    }).getDateList();
+  }
+</script>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <select id="dates" ></select>
+    <script>loadDates();</script>
+    <br/><br/>
+    <button id="submitButton" onclick="submit()">Create Selected Week Schedule</button>
+    <button id="cancel" onclick="cancelButton()">Cancel</button>
+  <script>
+    function cancelButton(){
+      google.script.run.closeSidebar();
+    }
+    function submit(){
+      var date = document.getElementById('dates').value;
+      if( date === 0 ){ return; }
+      console.log(date);
+      google.script.run.createNewWeek(date);
+    }
+  </script>
+  </body>
+</html>

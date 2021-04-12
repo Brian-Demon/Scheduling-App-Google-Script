@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+ <script>
+  function loadNames(){
+    google.script.run.withSuccessHandler(function(arg){
+      let nameSelect = document.getElementById('names');
+      console.log(arg);        
+      
+      let option = document.createElement('option');
+      option.value = '';
+      option.text = '-- Select Employee --';
+      nameSelect.appendChild(option);
+      
+      arg.forEach(function(item, index){
+        let option = document.createElement('option');
+        option.text = item[0];
+        //option.value = item[1];
+        nameSelect.appendChild(option);
+      });
+    }).getRosterList();
+  }
+</script>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <select id="names" ></select>
+    <script>loadNames();</script>
+    <br/><br/>
+    <button id="submitButton" onclick="submit()">Remove</button>
+    <button id="cancel" onclick="cancelButton()">Cancel</button>
+  <script>
+    function cancelButton(){
+      google.script.run.closeSidebar();
+    }
+    function submit(){
+      var name = document.getElementById('names').value;
+      console.log(name);
+      google.script.run.removalExecute(name);
+    }
+  </script>
+  </body>
+</html>
