@@ -2,7 +2,7 @@
 
 This is a scheduling app I wrote for a bar I worked at.  It can be altered and talored for many different types of businesses.  It utilizes a backend database also written in JS (Google Script) and two Google Forms that are interconnect for this app to function.
 
-Database spreadsheet repo: #TODO
+Database spreadsheet repo: https://github.com/Brian-Demon/Scheduling-App-Database-Google-Script
 
 
 Forms that link with database spreadsheet and are then used by this app (spreadsheet):
