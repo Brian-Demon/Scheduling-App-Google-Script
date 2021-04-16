@@ -11,11 +11,11 @@ To clone project:
 Add Google Apps Script GitHub Assistant (https://chrome.google.com/webstore/detail/google-apps-script-github/lfjcgcmkmjjlieihflfhjopckgpelofo/related) to gain access to GitHub functionalty
 
 ## Change Sheet ID:
-  - After cloning the repo and making a copy of the Google spreadsheet, open the spreadsheet and do the following:
-    - Tools->Script editor->in "0) Global Variables" change `var ssData = SpreadsheetApp.openById( --THE ID OF THE DATABSE SPREADSHEET-- );`
-      - The ID can be found in the URL for your SCHEDULING APP DATABASE spreadsheet, *not the scheduling app spreadsheet*
-         - ( https://.../spreadsheets/d/**THE-SPREADSHEET-ID-IS-HERE**/... )
-      - *REQUIRED* -- If you do not change the ID the code will explode
+After cloning the repo and making a copy of the Google spreadsheet, open the spreadsheet and do the following:
+  - Tools->Script editor->in "0) Global Variables" change `var ssData = SpreadsheetApp.openById( --THE ID OF THE DATABSE SPREADSHEET-- );`
+    - The ID can be found in the URL for your SCHEDULING APP DATABASE spreadsheet, *not the scheduling app spreadsheet*
+       - ( https://.../spreadsheets/d/**THE-SPREADSHEET-ID-IS-HERE**/... )
+    - *REQUIRED* -- If you do not change the ID the code will explode
 
 ## Google Authorization Steps:
 ![Google Script Authorization Step 1](https://user-images.githubusercontent.com/74803363/115067547-b56d2e80-9eb6-11eb-83ef-be47fa632c0d.PNG)
