@@ -18,6 +18,7 @@ After cloning the repo and making a copy of the Google spreadsheet, open the spr
     - *REQUIRED* -- If you do not change the ID the code will explode
 
 ## Google Authorization Steps:
+You will need to give permissions the first time you want to run the script.
 ![Google Script Authorization Step 1](https://user-images.githubusercontent.com/74803363/115067547-b56d2e80-9eb6-11eb-83ef-be47fa632c0d.PNG)
 ![Google Script Authorization Step 2](https://user-images.githubusercontent.com/74803363/115067554-b69e5b80-9eb6-11eb-88c9-e6bf5b168bf1.PNG)
 ![Google Script Authorization Step 3](https://user-images.githubusercontent.com/74803363/115067558-b7cf8880-9eb6-11eb-8ea2-3a35f5b43c50.PNG)
