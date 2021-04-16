@@ -13,7 +13,7 @@ Add Google Apps Script GitHub Assistant (https://chrome.google.com/webstore/deta
 ## Change Sheet ID:
 After cloning the repo and making a copy of the Google spreadsheet, open the spreadsheet and do the following:
   - Tools->Script editor->in "0) Global Variables" change `var ssData = SpreadsheetApp.openById( --THE ID OF THE DATABSE SPREADSHEET-- );`
-    - The ID can be found in the URL for your SCHEDULING APP DATABASE spreadsheet, *not the scheduling app spreadsheet*
+    - The ID can be found in the URL for your SCHEDULING APP DATABASE spreadsheet, *not the scheduling app spreadsheet*, from: https://github.com/Brian-Demon/Scheduling-App-Database-Google-Script
        - ( https://.../spreadsheets/d/**THE-SPREADSHEET-ID-IS-HERE**/... )
     - *REQUIRED* -- If you do not change the ID the code will explode
 
